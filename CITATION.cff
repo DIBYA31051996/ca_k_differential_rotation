@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite the associated paper."
+title: "Differential Rotation of the Solar Chromosphere: A Century-long Perspective from Kodaikanal Solar Observatory Ca II K Data"
+type: software
+authors:
+  - family-names: Mishra
+    given-names: Dibya Kirti
+  - family-names: Routh
+    given-names: Srinjana
+  - family-names: Jha
+    given-names: Bibhuti Kumar
+  - family-names: Chatzistergos
+    given-names: Theodosios
+  - family-names: Basu
+    given-names: Judhajeet
+  - family-names: Chatterjee
+    given-names: Subhamoy
+  - family-names: Banerjee
+    given-names: Dipankar
+  - family-names: Ermolli
+    given-names: Ilaria
+doi: 10.3847/1538-4357/ad1188
+url: "https://doi.org/10.3847/1538-4357/ad1188"
