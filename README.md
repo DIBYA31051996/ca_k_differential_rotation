@@ -16,9 +16,6 @@ Chromospheric differential rotation is a key component in comprehending the atmo
 | :--- | :--- |
 | [`method_figures.ipynb`](method_figures.ipynb) | Python code for the methodology figures and correlation-threshold tests. |
 | [`result_figures.ipynb`](result_figures.ipynb) | Python code for the differential-rotation results and cross-validation figures. |
-| [`data/`](data/) | Processed IDL `.sav` inputs available for the published figure cells. |
-| [`figures/`](figures/) | PDF plot components used in Figures 1-10 of the paper. |
-| [`config/bkj_style.mplstyle`](config/bkj_style.mplstyle) | Matplotlib style used to generate the plots. |
 
 ## Average chromospheric rotation profile
 
