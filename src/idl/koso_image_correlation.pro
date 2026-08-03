@@ -1,3 +1,22 @@
+;==============================================================================
+; KOSO IMAGE-CORRELATION WORKFLOW (MAIN ANALYSIS ENTRY POINT)
+;
+; Measures chromospheric rotation from consecutive calibrated KoSO Ca II K
+; observations. The program performs orientation correction, disk masking,
+; heliographic remapping, 5-degree latitude-band extraction, two-dimensional
+; cross-correlation, peak-quality filtering, and longitudinal-shift export.
+;
+; Requirements:
+;   - A configured IDL/SolarSoft environment
+;   - Calibrated KoSO FITS observations
+;   - corrected_time_kodai_v6.txt from data/legacy
+;   - Supporting routines in this directory (for example cart2helio.pro and
+;     position_n.pro)
+;
+; Before running, update `dir` below and make the corrected-time table
+; available in the IDL working directory (or replace it with an absolute path).
+;==============================================================================
+
 dir = "/Data/bibhuti/CaK/Theo_Cali/ca_k_theo"
 scale = 0.1
 ;!p.multi=[0,1,2]
