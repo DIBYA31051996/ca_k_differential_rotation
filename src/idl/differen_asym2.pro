@@ -1,3 +1,16 @@
+PRO DIFFEREN_ASYM2
+;+
+; Name: DIFFEREN_ASYM2
+; Purpose: Calculate time-dependent north-south rotation asymmetry and compare
+;   it with the corresponding hemispheric plage-area asymmetry.
+; Calling Sequence: DIFFEREN_ASYM2
+; Inputs: None. Reads correlation tables and restores area_strip.sav from the
+;   current IDL working directory.
+; Outputs: Annual rotation and plage-area asymmetry quantities in routine scope.
+; Dependencies: READCOL, RESTORE, STR2UTC, UTC2DOY, SIDERIAL_CORR.
+; Side Effects: Restores variables from area_strip.sav.
+;-
+
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Read the longitudinal shift value file which has information of time of observation of day 1 image ,time difference between two images and longitudinal shift values for every latitude bin
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

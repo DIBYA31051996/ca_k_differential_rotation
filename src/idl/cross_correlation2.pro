@@ -1,3 +1,17 @@
+PRO CROSS_CORRELATION2
+;+
+; Name: CROSS_CORRELATION2
+; Purpose: Apply the image-correlation rotation measurement to consecutive
+;   MDI observations for validation of the KoSO analysis method.
+; Calling Sequence: CROSS_CORRELATION2
+; Inputs: None. Set DIR below to the directory containing MDI FITS images.
+; Outputs: MDIcross_correlation_v7.txt (longitudinal shifts) and
+;   MDIcross_correlation_v8.txt (peak correlation coefficients).
+; Dependencies: READ_SDO, STR2UTC, ANYTIM2TAI, CORREL_IMAGES,
+;   CORRMAT_ANALYZE, and CART2HELIO.
+; Side Effects: Reads FITS images and overwrites both output text files.
+;-
+
 dir = "/home/dibya/wl_mdi"
 ;file =  file_search(dir,'{mdi.fd_ic_06h.2000,mdi.fd_ic_06h.2001,mdi.fd_ic_06h.2002}*.fits',count = n_files)
 file =  file_search(dir,'*.fits',count = n_files)

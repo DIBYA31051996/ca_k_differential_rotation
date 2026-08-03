@@ -17,6 +17,21 @@
 ; available in the IDL working directory (or replace it with an absolute path).
 ;==============================================================================
 
+PRO KOSO_IMAGE_CORRELATION
+;+
+; Name: KOSO_IMAGE_CORRELATION
+; Purpose: Measure chromospheric rotation from consecutive calibrated KoSO
+;   Ca II K observations using latitude-strip image cross-correlation.
+; Calling Sequence: KOSO_IMAGE_CORRELATION
+; Inputs: None. Set DIR below to the calibrated KoSO FITS directory and make
+;   corrected_time_kodai_v6.txt available in the working directory.
+; Outputs: corel_1983v0.txt (longitudinal displacement) and corel_1983v1.txt
+;   (peak correlation coefficient), with one row per observation pair.
+; Dependencies: MREADFITS, STR2UTC, ANYTIM2TAI, CORREL_IMAGES,
+;   CORRMAT_ANALYZE, POSITION_N, and CART2HELIO.
+; Side Effects: Reads FITS images and overwrites both output text files.
+;-
+
 dir = "/Data/bibhuti/CaK/Theo_Cali/ca_k_theo"
 scale = 0.1
 ;!p.multi=[0,1,2]

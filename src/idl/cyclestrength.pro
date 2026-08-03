@@ -1,3 +1,17 @@
+PRO CYCLESTRENGTH
+;+
+; Name: CYCLESTRENGTH
+; Purpose: Measure differential-rotation coefficients for individual solar
+;   cycles and compare them with cycle strength.
+; Calling Sequence: CYCLESTRENGTH
+; Inputs: None. Reads correlation-shift and solar-cycle tables from the
+;   current IDL working directory.
+; Outputs: cycle_strength.sav containing cycle strength, fitted coefficients,
+;   uncertainties, and correlation statistics.
+; Dependencies: READCOL, STR2UTC, UTC2DOY, SIDERIAL_CORR, MPFITFUN, DIFF_ROT1.
+; Side Effects: Prints fitted values and overwrites cycle_strength.sav.
+;-
+
 
 
 readcol,'corel_yshfv0.txt',time1, dt, dphi1,dphi2,dphi3,dphi4,dphi5,dphi6,dphi7,dphi8,dphi9,dphi10,dphi11,dphi12,dphi13,dphi14,dphi15,dphi16,dphi17,dphi18,dphi19,dphi20,dphi21,dphi22, format='(a,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f)';,numline = 5

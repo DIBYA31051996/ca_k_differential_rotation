@@ -1,4 +1,20 @@
-function  cart2helio , image, time ,hdr
+FUNCTION CART2HELIO, IMAGE, TIME, HDR
+;+
+; Name: CART2HELIO
+; Purpose: Remap a full-disk solar image from Cartesian detector coordinates
+;   onto a regular heliographic longitude-latitude grid.
+; Calling Sequence: result = CART2HELIO(image, time, header)
+; Inputs:
+;   IMAGE - Two-dimensional calibrated full-disk image.
+;   TIME  - Observation time accepted by PB0R.
+;   HDR   - Structure containing the XC, YC, and RD disk geometry fields.
+; Return Value: A 1801 x 1801 floating-point map sampled at 0.1 degrees.
+; Dependencies: PB0R and INTERPOLATE.
+; Side Effects: None.
+;-
+
+        IF N_PARAMS() NE 3 THEN MESSAGE, $
+          'Syntax: result = CART2HELIO(image, time, header)'
         p = pb0r(time,/earth)
         b0 = p[1] *!DTOR
       

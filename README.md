@@ -97,6 +97,16 @@ Run notebook cells from the `notebooks/` directory so their `../data/`, `../conf
 
 The legacy analysis is written in IDL and relies on astronomy/SolarSoft routines such as `READ_SDO`, `CORREL_IMAGES`, and `CORRMAT_ANALYZE`. Adjust the input directory at the beginning of the main IDL program before running it in a configured IDL environment.
 
+The analysis files are callable IDL routines. For example:
+
+```idl
+KOSO_IMAGE_CORRELATION
+DIFFERENTIA_ASYMMETRY
+CYCLESTRENGTH
+```
+
+IDL automatically compiles a routine when its `.pro` filename matches the routine name and `src/idl/` is included in `!PATH`.
+
 ## Data availability
 
 The original analysis workspace did not contain `south_hem.sav`, `wilson_scatter_new.sav`, or `wilson_scatter_new1.sav`. Cells that use these processed inputs cannot be regenerated until the files are restored; the corresponding published PDFs remain available in `figures/`. Original observatory data are available from the archives cited in the paper.

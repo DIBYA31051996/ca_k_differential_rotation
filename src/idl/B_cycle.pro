@@ -1,3 +1,16 @@
+PRO B_CYCLE
+;+
+; Name: B_CYCLE
+; Purpose: Estimate differential-rotation gradients independently for the
+;   northern and southern hemispheres during each solar cycle.
+; Calling Sequence: B_CYCLE
+; Inputs: None. Reads corel_yshfv0.txt, corel_yshfv2.txt, and cycle.txt from
+;   the current IDL working directory.
+; Outputs: Populates B_N, B_S, B_ERR_N, and B_ERR_S in the routine scope.
+; Dependencies: READCOL, STR2UTC, UTC2DOY, SIDERIAL_CORR, MPFITFUN, DIFF_ROT1.
+; Side Effects: Reads the input tables; optional PRINT/SAVE lines are retained.
+;-
+
 readcol,'corel_yshfv0.txt',time1, dt, dphi1,dphi2,dphi3,dphi4,dphi5,dphi6,dphi7,dphi8,dphi9,dphi10,dphi11,dphi12,dphi13,dphi14,dphi15,dphi16,dphi17,dphi18,dphi19,dphi20,dphi21,dphi22, format='(a,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f)';,numline = 5
 readcol,'corel_yshfv2.txt',_time1, _dt, dpc1,dpc2,dpc3,dpc4,dpc5,dpc6,dpc7,dpc8,dpc9,dpc10,dpc11,dpc12,dpc13,dpc14,dpc15,dpc16,dpc17,dpc18,dpc19,dpc20,dpc21,dpc22, format='(a,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f,f)'
 readcol,'cycle.txt',cycles,_tt,SN_max,format='(I,f,f)'

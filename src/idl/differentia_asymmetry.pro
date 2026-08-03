@@ -1,3 +1,16 @@
+PRO DIFFERENTIA_ASYMMETRY
+;+
+; Name: DIFFERENTIA_ASYMMETRY
+; Purpose: Derive northern, southern, symmetric, and asymmetric chromospheric
+;   differential-rotation profiles from measured longitudinal shifts.
+; Calling Sequence: DIFFERENTIA_ASYMMETRY
+; Inputs: None. Reads correlation-shift tables and Bertello1.txt.
+; Outputs: Fitted profile coefficients and uncertainties in routine scope.
+; Dependencies: READCOL, STR2UTC, UTC2DOY, SIDERIAL_CORR, MPFITFUN,
+;   DIFF_ROT1, and DIFF_ROT2.
+; Side Effects: Prints the northern-hemisphere fit parameters.
+;-
+
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Read the longitudinal shift value file which has information of time of observation of day 1 image ,time difference between two images and longitudinal shift values for every latitude bin
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -115,6 +128,3 @@ yy3 = 14.61-2.18*(sin(ll*!dtor)^2)-1.10*(sin(ll*!dtor)^4)
 ;save,par1n,par1s,par2,perrorn,perrors,perrort,filename='parameters.sav'
 print,par1n
 end
-
-
-

@@ -1,3 +1,15 @@
+PRO DIFFERENTIAL_ROTATION
+;+
+; Name: DIFFERENTIAL_ROTATION
+; Purpose: Convert MDI correlation shifts to sidereal angular rotation rates,
+;   form latitude-binned profiles, and compare correlation with tracking.
+; Calling Sequence: DIFFERENTIAL_ROTATION
+; Inputs: None. Reads the MDI shift tables from the current working directory.
+; Outputs: diff_mdi1.sav with the profiles, errors, and comparison measurements.
+; Dependencies: READCOL, STR2UTC, SIDERIAL_CORR, MPFITFUN, and DIFF_ROT1.
+; Side Effects: Prints the final profile and overwrites diff_mdi1.sav.
+;-
+
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ;Read the longitudinal shift value file which has information of time of observation of day 1 image ,time difference between two images and longitudinal shift values for every latitude bin
 ;------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
